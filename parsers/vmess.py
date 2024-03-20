@@ -117,11 +117,13 @@ def parse(data):
                 }
             }
             if item.get('path'):
-                matches = re.search(r'\d+', item['path'])
-                node['transport']['path'] = '/' if matches else item['path']
-                if matches:
-                    node['transport']['early_data_header_name'] = 'Sec-WebSocket-Protocol'
-                    node['transport']['max_early_data'] = int(matches.group())
+                #matches = re.search(r'\d+', item['path'])
+                #node['transport']['path'] = '/' if matches else item['path']
+                #if matches:
+                #    node['transport']['early_data_header_name'] = 'Sec-WebSocket-Protocol'
+                #    node['transport']['max_early_data'] = int(matches.group())
+                node['transport']['path'] = item['path']
+                node['transport']['max_early_data'] = 0
         elif item['net'] == 'quic':
             node['transport'] = {
                 'type':'quic'
