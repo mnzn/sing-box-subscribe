@@ -63,6 +63,9 @@
       "outbounds": [
         "{all}"
       ],
+      "filter":[
+        {"action":"exclude","keywords":["通知"],"for":["tag_1"]}
+      ],
       "default": "h2-out",
       "interrupt_exist_connections": false
     },
