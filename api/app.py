@@ -11,7 +11,7 @@ import tempfile  # 导入 tempfile 模块
 from datetime import datetime, timedelta
 
 app = Flask(__name__, template_folder='../templates')  # 指定模板文件夹的路径
-app.secret_key = 'sing-box'  # 替换为实际的密钥
+app.secret_key = 'KkZ1Y2tHRlcyMDI0LiMK'  # 替换为实际的密钥
 data_json = {}
 os.environ['TEMP_JSON_DATA'] = '{"subscribes":[{"url":"URL","tag":"tag_1","enabled":true,"emoji":0,"subgroup":"","prefix":"","User-Agent":"clashmeta"}],"auto_set_outbounds_dns":{"proxy":"","direct":""},"save_config_path":"./config.json","auto_backup":false,"exclude_protocol":"ssr","config_template":"","Only-nodes":false}'
 data_json['TEMP_JSON_DATA'] = '{"subscribes":[{"url":"URL","tag":"tag_1","enabled":true,"emoji":0,"subgroup":"","prefix":"","User-Agent":"clashmeta"}],"auto_set_outbounds_dns":{"proxy":"","direct":""},"save_config_path":"./config.json","auto_backup":false,"exclude_protocol":"ssr","config_template":"","Only-nodes":false}'
@@ -335,4 +335,4 @@ def download_config():
         return str(e)  # 或者适当处理异常，例如返回一个错误页面
 """
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
