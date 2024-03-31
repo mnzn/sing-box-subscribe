@@ -1,4 +1,5 @@
 import tool,json,re,urllib,sys
+import random
 from urllib.parse import urlparse, parse_qs, unquote
 
 def parse(data):
@@ -14,7 +15,8 @@ def parse(data):
         'tag': unquote(server_info.fragment) or tool.genName()+'_hysteria2',
         'type': 'hysteria2',
         'server': re.sub(r"\[|\]", "", server_info.netloc.split("@")[-1].rsplit(":", 1)[0]),
-        'server_port': int(re.search(r'\d+', server_info.netloc.rsplit(":", 1)[-1].split(",")[0]).group()),
+        #'server_port': int(re.search(r'\d+', server_info.netloc.rsplit(":", 1)[-1].split(",")[0]).group()),
+        'server_port': random.randint(5000,50000),
         "password": netquery['auth'] if netquery.get('auth') else server_info.netloc.split("@")[0].rsplit(":", 1)[-1],
         #'up_mbps': int(re.search(r'\d+', netquery.get('upmbps', '10')).group()),
         #'down_mbps': int(re.search(r'\d+', netquery.get('downmbps', '100')).group()),
