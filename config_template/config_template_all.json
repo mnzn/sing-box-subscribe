@@ -49,6 +49,7 @@
       "tag": "tun-in",
       "interface_name": "utun",
       "inet4_address": "172.19.0.1/30",
+      "domain_strategy": "prefer_ipv4",
       "mtu": 9000,
       "stack": "gvisor",
       "auto_route": true,
