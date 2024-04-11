@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "google",
-        "address": "tls://8.8.8.8",
+        "address": "8.8.8.8",
         "detour": "proxy"
       },
       {
