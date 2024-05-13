@@ -12,7 +12,7 @@
       },
       {
         "tag": "local",
-        "address": "119.29.29.29",
+        "address": "local",
         "detour": "direct"
       }
     ],
